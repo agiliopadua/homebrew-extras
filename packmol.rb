@@ -2,8 +2,8 @@ require "formula"
 
 class Packmol < Formula
   homepage "http://www.ime.unicamp.br/~martinez/packmol/"
-  url "http://leandro.iqm.unicamp.br/packmol/versionhistory/packmol-14.072.tar.gz"
-  sha1 "a5a1e6e0ed328b373867e64e2e639887f6401ca7"
+  url "http://leandro.iqm.unicamp.br/packmol/versionhistory/packmol-14.225.tar.gz"
+  sha1 "024c2ef3df4adc584301b6124646f80b200984c8"
 
   env :std
 
