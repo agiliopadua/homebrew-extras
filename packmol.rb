@@ -13,6 +13,6 @@ class Packmol < Formula
     system "./configure"
     system "make"
     bin.install("packmol")
-    share.install("solvate.tcl")
+    (share/"packmol").install("solvate.tcl")
   end
 end
