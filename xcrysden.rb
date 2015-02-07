@@ -1,6 +1,6 @@
 require "formula"
 
-class XCrysDen < Formula
+class Xcrysden < Formula
   homepage "http://www.xcrysden.org/"
   url "http://www.xcrysden.org/download/xcrysden-1.5.60.tar.gz"
   version "1.5.60"
