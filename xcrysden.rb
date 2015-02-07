@@ -1,4 +1,6 @@
-class Xcrysden < Formula
+require "formula"
+
+class XCrysDen < Formula
   homepage "http://www.xcrysden.org/"
   url "http://www.xcrysden.org/download/xcrysden-1.5.60.tar.gz"
   version "1.5.60"
@@ -8,12 +10,12 @@ class Xcrysden < Formula
   depends_on :fortran
   depends_on "homebrew/dupes/tcl-tk" => "with-x11"
   depends_on "fftw" => "with-fortran"
-  depends_on "wget"
+  depends_on "wget" => :build
   
   # Fix togl -accum false in Tcl and modify Make.sys
   patch do
     url "https://gist.github.com/1f9fd5e8a598018f03b6.git"
-    sha1 "21ab6baf87cfeecb79405154c23a5f6d214f7501"
+    sha1 "d1298dcdc43eb54d2783ce99f3ae639e2a840d78"
   end
 
   def install
@@ -21,7 +23,12 @@ class Xcrysden < Formula
 
     ENV.deparallelize
     system "make", "xcrysden"
-    system "make", "install"
+
+    args = %W[
+      prefix=#{prefix}
+    ]
+    
+    system "make", *args, "install"
   end
 
   def caveats
