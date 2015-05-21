@@ -14,7 +14,7 @@ class Xcrysden < Formula
   
   # Fix togl -accum false in Tcl and modify Make.sys
   patch do
-    url "https://gist.github.com/1f9fd5e8a598018f03b6.git"
+    url "https://gist.githubusercontent.com/agiliopadua/1f9fd5e8a598018f03b6/raw/9e63c78c0767e9f542f7833bbfb1be339c963035/xcrysden-macosx.patch"
     sha1 "d1298dcdc43eb54d2783ce99f3ae639e2a840d78"
   end
 
