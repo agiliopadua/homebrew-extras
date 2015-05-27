@@ -3,7 +3,6 @@ require "formula"
 class Xcrysden < Formula
   homepage "http://www.xcrysden.org/"
   url "http://www.xcrysden.org/download/xcrysden-1.5.60.tar.gz"
-  version "1.5.60"
   sha1 "388cf837aa757e612f36a12eb7fb592c36cfd6f3"
 
   depends_on :x11
