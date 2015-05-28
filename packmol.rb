@@ -2,9 +2,9 @@ require "formula"
 
 class Packmol < Formula
   homepage "http://www.ime.unicamp.br/~martinez/packmol/"
-  url "http://leandro.iqm.unicamp.br/packmol/versionhistory/packmol-15.133.tar.gz"
-  sha1 "ae8a045a3ef43b8dbaafbd3cff0020ccbe232303"
-
+  url "http://leandro.iqm.unicamp.br/packmol/versionhistory/packmol-15.148.tar.gz"
+  sha1 "1af2aada29c35aabf19e689724c7e05125d7684b"
+  
   env :std
 
   depends_on :fortran
