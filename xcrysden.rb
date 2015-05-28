@@ -40,4 +40,9 @@ class Xcrysden < Formula
       For more info about customization, see: http://www.xcrysden.org/doc/custom.html
     EOS
   end
+
+  test do
+    system bin/"xcrysden", "--version"
+  end
+     
 end

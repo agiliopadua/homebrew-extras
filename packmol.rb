@@ -27,6 +27,6 @@ class Packmol < Formula
     cp share/"packmol/examples/water.xyz", testpath
     cp share/"packmol/examples/chlor.xyz", testpath
     cp share/"packmol/examples/t3.xyz", testpath
-    system "packmol < interface.inp"
+    system bin/"packmol < interface.inp"
   end
 end
