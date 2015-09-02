@@ -3,7 +3,7 @@ require "formula"
 class Packmol < Formula
   homepage "http://www.ime.unicamp.br/~martinez/packmol/"
   url "http://leandro.iqm.unicamp.br/packmol/versionhistory/packmol-15.217.tar.gz"
-  sha1 "6aeb5a1a71cbd5ac1e796e77552db46f721ac4f5"
+  sha1 "a1172254194fbaa5a279dd3c6d3e742492267324"
   
   env :std
 
