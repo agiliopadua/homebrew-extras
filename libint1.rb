@@ -10,6 +10,10 @@ class Libint1 < Formula
   env :std
 
   def install
+    system "aclocal -I lib/libtool"
+    system "autoconf"
+    system "mkdir obj"
+    system "cd obj" 
     system "./configure", "--prefix=#{prefix}",
            "--with-libint-max-am=5", "--with-libderiv-max-am1=4"
     system "make"
