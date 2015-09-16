@@ -1,6 +1,7 @@
 require "formula"
 
 class Xcrysden < Formula
+  desc "Crystalline and molecular structure visualisation program"
   homepage "http://www.xcrysden.org/"
   url "http://www.xcrysden.org/download/xcrysden-1.5.60.tar.gz"
   sha1 "388cf837aa757e612f36a12eb7fb592c36cfd6f3"

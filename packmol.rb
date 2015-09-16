@@ -1,6 +1,7 @@
 require "formula"
 
 class Packmol < Formula
+  desc "Packing optimization for molecular dynamics simulations"
   homepage "http://www.ime.unicamp.br/~martinez/packmol/"
   url "http://leandro.iqm.unicamp.br/packmol/versionhistory/packmol-15.217.tar.gz"
   sha1 "a1172254194fbaa5a279dd3c6d3e742492267324"
