@@ -3,8 +3,8 @@ require "formula"
 class Packmol < Formula
   desc "Packing optimization for molecular dynamics simulations"
   homepage "http://www.ime.unicamp.br/~martinez/packmol/"
-  url "http://leandro.iqm.unicamp.br/packmol/versionhistory/packmol-15.217.tar.gz"
-  sha1 "a1172254194fbaa5a279dd3c6d3e742492267324"
+  url "http://leandro.iqm.unicamp.br/packmol/versionhistory/packmol-15.287.tar.gz"
+  sha1 "3cc4c9032be98c1b58ccb52d41dc3860f307b6c9"
   
   env :std
 
