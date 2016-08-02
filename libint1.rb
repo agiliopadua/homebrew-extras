@@ -5,7 +5,7 @@ class Libint1 < Formula
   homepage "http://github.com/evaleev/libint/"
   url "https://github.com/evaleev/libint/archive/v1.zip"
   version "1.1.6"
-  sha1 "10696b933ee122904752481d64ba38e2cdf18c36"
+  sha256 "0368c7f0769ef8ccf2566c042d8ea0f50d272641491d1c5663160c21bb27e762"
 
   env :std
 

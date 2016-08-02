@@ -4,7 +4,7 @@ class Xcrysden < Formula
   desc "Crystalline and molecular structure visualisation program"
   homepage "http://www.xcrysden.org/"
   url "http://www.xcrysden.org/download/xcrysden-1.5.60.tar.gz"
-  sha1 "388cf837aa757e612f36a12eb7fb592c36cfd6f3"
+  sha256 "a695729f1bb3e486b86a74106c06a392c8aca048dc6b0f20785c3c311cfb2ef4"
 
   depends_on :x11
   depends_on :fortran
@@ -15,7 +15,7 @@ class Xcrysden < Formula
   # Fix togl -accum false in Tcl and modify Make.sys
   patch do
     url "https://gist.githubusercontent.com/agiliopadua/1f9fd5e8a598018f03b6/raw/9e63c78c0767e9f542f7833bbfb1be339c963035/xcrysden-macosx.patch"
-    sha1 "d1298dcdc43eb54d2783ce99f3ae639e2a840d78"
+    sha1 "3a93bf9189c2f6e613308725c8fd299f12b35cf44a272b27bc337e8a3d8696f3"
   end
 
   def install
