@@ -19,8 +19,8 @@ class Packmol < Formula
     system "./configure"
     system "make"
     bin.install("packmol")
-    (share/"packmol").install "solvate.tcl"
-    (share/"packmol/examples").install resource("examples")
+    (pkgshare/"packmol").install "solvate.tcl"
+    (pkgshare/"packmol/examples").install resource("examples")
   end
 
   test do
