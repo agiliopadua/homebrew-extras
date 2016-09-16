@@ -14,7 +14,7 @@ class Packmol < Formula
   end
 
   def install
-    system "./configure"
+    system "./configure", "gfortran"
     system "make"
     bin.install("packmol")
     pkgshare.install "solvate.tcl"
