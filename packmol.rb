@@ -22,10 +22,10 @@ class Packmol < Formula
   end
 
   test do
-    cp share/"packmol/examples/interface.inp", testpath
-    cp share/"packmol/examples/water.xyz", testpath
-    cp share/"packmol/examples/chlor.xyz", testpath
-    cp share/"packmol/examples/t3.xyz", testpath
+    cp pkgshare/"examples/interface.inp", testpath
+    cp pksghare/"examples/water.xyz", testpath
+    cp pkgshare/"examples/chlor.xyz", testpath
+    cp pkgshare/"examples/t3.xyz", testpath
     system bin/"packmol < interface.inp"
   end
 end
