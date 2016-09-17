@@ -15,6 +15,7 @@ class Packmol < Formula
 
   def install
     system "./configure", "gfortran"
+    inreplace "Makefile", "usegencan.o : usegencan.f90", "usegencan.o : usegencan.f90 sizes.o"
     system "make"
     bin.install("packmol")
     pkgshare.install "solvate.tcl"
