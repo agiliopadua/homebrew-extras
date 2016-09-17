@@ -1,8 +1,8 @@
 class Packmol < Formula
   desc "Packing optimization for molecular dynamics simulations"
   homepage "http://www.ime.unicamp.br/~martinez/packmol/"
-  url "http://leandro.iqm.unicamp.br/packmol/versionhistory/packmol-16.228.tar.gz"
-  sha256 "ffdb8f3e772926402719dfc0186a36f3753af0917a0c4c12a117b8acbb244cb4"
+  url "http://leandro.iqm.unicamp.br/packmol/versionhistory/packmol-16.261.tar.gz"
+  sha256 "6ef74005da672743eddfb54b7c231da1b2dd0d6757fdb3ac047110bac9d884cf"
 
   env :std
 
@@ -14,8 +14,7 @@ class Packmol < Formula
   end
 
   def install
-    system "./configure", "gfortran"
-    inreplace "Makefile", "usegencan.o : usegencan.f90", "usegencan.o : usegencan.f90 sizes.o"
+    system "./configure"
     system "make"
     bin.install("packmol")
     pkgshare.install "solvate.tcl"
