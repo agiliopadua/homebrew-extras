@@ -4,8 +4,6 @@ class Packmol < Formula
   url "http://leandro.iqm.unicamp.br/packmol/versionhistory/packmol-16.261.tar.gz"
   sha256 "6ef74005da672743eddfb54b7c231da1b2dd0d6757fdb3ac047110bac9d884cf"
 
-  env :std
-
   depends_on :fortran
 
   resource "examples" do
@@ -22,10 +20,7 @@ class Packmol < Formula
   end
 
   test do
-    cp pkgshare/"examples/interface.inp", testpath
-    cp pkgshare/"examples/water.xyz", testpath
-    cp pkgshare/"examples/chlor.xyz", testpath
-    cp pkgshare/"examples/t3.xyz", testpath
+    %w[interface.inp water.xyz chlor.xyz t3.xyz].each {|f| cp "#{pkgshare}/examples/#{f}", testpath}
     system bin/"packmol < interface.inp"
   end
 end
