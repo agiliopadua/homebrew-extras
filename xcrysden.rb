@@ -1,5 +1,3 @@
-require "formula"
-
 class Xcrysden < Formula
   desc "Crystalline and molecular structure visualisation program"
   homepage "http://www.xcrysden.org/"
@@ -45,5 +43,4 @@ class Xcrysden < Formula
   test do
     system bin/"xcrysden", "--version"
   end
-     
 end

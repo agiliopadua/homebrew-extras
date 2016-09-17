@@ -20,7 +20,7 @@ class Packmol < Formula
   end
 
   test do
-    %w[interface.inp water.xyz chlor.xyz t3.xyz].each {|f| cp "#{pkgshare}/examples/#{f}", testpath}
+    %w[interface.inp water.xyz chlor.xyz t3.xyz].each { |f| cp "#{pkgshare}/examples/#{f}", testpath }
     system bin/"packmol < interface.inp"
   end
 end
