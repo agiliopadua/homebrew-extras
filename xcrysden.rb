@@ -6,7 +6,7 @@ class Xcrysden < Formula
 
   depends_on :x11
   depends_on :fortran
-  depends_on "homebrew/dupes/tcl-tk" => "with-x11"
+  depends_on "tcl-tk"
   depends_on "fftw" => "with-fortran"
   depends_on "wget" => :build
 
