@@ -8,8 +8,8 @@ class Libint1 < Formula
   depends_on "autoconf" => :build
 
   def install
-    system "aclocal", "-I", "lib/libtool"
-    system "autoconf"
+#    system "aclocal", "-I", "lib/libtool"
+#    system "autoconf"
     system "./configure", "--prefix=#{prefix}",
            "--with-libint-max-am=5", "--with-libderiv-max-am1=4"
     system "make"
