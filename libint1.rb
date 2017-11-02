@@ -3,7 +3,7 @@ class Libint1 < Formula
   homepage "https://github.com/evaleev/libint/"
   url "https://github.com/evaleev/libint/archive/v1.zip"
   version "1.1.6"
-  sha256 "0368c7f0769ef8ccf2566c042d8ea0f50d272641491d1c5663160c21bb27e762"
+  sha256 "807cc66c9cc1eb7a8266e807641abbb6c10cd5fee35f2bd3914d7b10cea97489"
 
   depends_on "autoconf" => :build
 
