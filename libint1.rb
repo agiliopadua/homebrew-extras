@@ -8,12 +8,23 @@ class Libint1 < Formula
   depends_on "automake" => :build
   depends_on "autoconf" => :build
 
+  option "with-max-am54",
+         "Max angular momentum 5(h) for energies and 4(g) for derivatives (defaults g and f)"
+  option "with-max-am65",
+         "Max angular momentum 6 for energies and 5 for derivatives"
+  
   def install
+    args = %W[
+         --prefix=#{prefix}
+    ]
+    
+    args << "--with-libint-max-am=5" << "--with-libderiv-max-am1=4" if build.with? "max-am54"
+    args << "--with-libint-max-am=6" << "--with-libderiv-max-am1=5" if build.with? "max-am65"
+
     # system "aclocal", "-I", "lib/libtool"
     system "aclocal"
     system "autoconf"
-    system "./configure", "--prefix=#{prefix}",
-           "--with-libint-max-am=5", "--with-libderiv-max-am1=4"
+    system "./configure", *args
     system "make"
     system "make", "install"
   end
