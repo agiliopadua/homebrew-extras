@@ -5,10 +5,12 @@ class Libint1 < Formula
   version "1.2.1"
   sha256 "807cc66c9cc1eb7a8266e807641abbb6c10cd5fee35f2bd3914d7b10cea97489"
 
+  depends_on "automake" => :build
   depends_on "autoconf" => :build
 
   def install
-    system "aclocal", "-I", "lib/libtool"
+    # system "aclocal", "-I", "lib/libtool"
+    system "aclocal"
     system "autoconf"
     system "./configure", "--prefix=#{prefix}",
            "--with-libint-max-am=5", "--with-libderiv-max-am1=4"
