@@ -10,8 +10,6 @@ class Libint1 < Formula
 
   option "with-max-am54",
          "Max angular momentum 5(h) for energies and 4(g) for derivatives (defaults g and f)"
-  option "with-max-am65",
-         "Max angular momentum 6 for energies and 5 for derivatives"
   
   def install
     args = %W[
@@ -19,7 +17,6 @@ class Libint1 < Formula
     ]
     
     args << "--with-libint-max-am=5" << "--with-libderiv-max-am1=4" if build.with? "max-am54"
-    args << "--with-libint-max-am=6" << "--with-libderiv-max-am1=5" if build.with? "max-am65"
 
     # system "aclocal", "-I", "lib/libtool"
     system "aclocal"
