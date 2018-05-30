@@ -1,9 +1,8 @@
 class Libxc4 < Formula
   desc "Library of exchange and correlation functionals for codes"
   homepage "http://octopus-code.org/wiki/Libxc"
-  url "http://www.tddft.org/programs/octopus/down.php?file=libxc/4.0.4/libxc-4.0.4.tar.gz"
-  sha256 "f63f0d67eca45ca0cde4c53bc4b340146f5323dcdbf1f679f13b86623be383d0"
-  revision 1
+  url "http://www.tddft.org/programs/octopus/down.php?file=libxc/4.1.1/libxc-4.1.1.tar.gz"
+  sha256 "4b3a2312ab84657c4eb37d4c92bef415a546ba5bd4a0867357851aff786759bf"
 
   depends_on "gcc" # for gfortran
 
