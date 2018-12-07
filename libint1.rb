@@ -1,9 +1,9 @@
 class Libint1 < Formula
   desc "Evaluation of molecular integrals over Gaussian functions"
-  homepage "https://github.com/evaleev/libint/"
-  url "https://github.com/evaleev/libint/archive/v1.zip"
-  version "1.2.1"
-  sha256 "807cc66c9cc1eb7a8266e807641abbb6c10cd5fee35f2bd3914d7b10cea97489"
+  homepage "https://sourceforge.net/projects/libint/"
+  url "http://sourceforge.net/projects/libint/files/v1-releases/libint-1.1.5.tar.gz"
+  version "1.1.5"
+  sha256 "31d7dd553c7b1a773863fcddc15ba9358bdcc58f5962c9fcee1cd24f309c4198"
 
   depends_on "automake" => :build
   depends_on "autoconf" => :build
