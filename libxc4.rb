@@ -1,14 +1,19 @@
 class Libxc4 < Formula
   desc "Library of exchange and correlation functionals for codes"
   homepage "http://octopus-code.org/wiki/Libxc"
-  url "http://www.tddft.org/programs/octopus/down.php?file=libxc/4.1.1/libxc-4.1.1.tar.gz"
-  sha256 "4b3a2312ab84657c4eb37d4c92bef415a546ba5bd4a0867357851aff786759bf"
+  url "https://gitlab.com/libxc/libxc/-/archive/4.2.3/libxc-4.2.3.tar.gz"
+  sha256 "869ca4967cd255097fd2dc31664f30607e81f5abcf5f9c89bd467dc0bf93e5aa"
 
   depends_on "gcc" # for gfortran
+  depends_on "autoconf" => :build
 
   conflicts_with "libxc"
+
+  # std env otherwise autoreconf does not work
+  env: std
   
   def install
+    system "autoreconf -i"
     system "./configure", "--prefix=#{prefix}",
                           "--enable-shared",
                           "FCCPP=gfortran -E -x c",
