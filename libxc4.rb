@@ -16,7 +16,7 @@ class Libxc4 < Formula
     system "autoreconf -i"
     system "./configure", "--prefix=#{prefix}",
                           "--enable-shared",
-                          "FCCPP=gfortran -E -x c",
+                          "FCCPP='gfortran -E -x c'",
                           "CC=#{ENV.cc}"
     system "make", "install"
   end
