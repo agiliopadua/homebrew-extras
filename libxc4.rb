@@ -10,7 +10,7 @@ class Libxc4 < Formula
   conflicts_with "libxc"
 
   # std env otherwise autoreconf does not work
-  env: std
+  env :std
   
   def install
     system "autoreconf -i"
