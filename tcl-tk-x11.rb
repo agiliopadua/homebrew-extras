@@ -2,25 +2,23 @@ class TclTkX11 < Formula
   desc "Tool Command Language"
   homepage "https://www.tcl.tk/"
 
-  stable do
-    url "https://downloads.sourceforge.net/project/tcl/Tcl/8.6.8/tcl8.6.8-src.tar.gz"
-    mirror "ftp://ftp.tcl.tk/pub/tcl/tcl8_6/tcl8.6.8-src.tar.gz"
+  url "https://downloads.sourceforge.net/project/tcl/Tcl/8.6.8/tcl8.6.8-src.tar.gz"
+  mirror "ftp://ftp.tcl.tk/pub/tcl/tcl8_6/tcl8.6.8-src.tar.gz"
+  version "8.6.8"
+  sha256 "c43cb0c1518ce42b00e7c8f6eaddd5195c53a98f94adc717234a65cbcfd3f96a"
+
+  resource "tk" do
+    url "https://downloads.sourceforge.net/project/tcl/Tcl/8.6.8/tk8.6.8-src.tar.gz"
+    mirror "ftp://ftp.tcl.tk/pub/tcl/tcl8_6/tk8.6.8-src.tar.gz"
     version "8.6.8"
-    sha256 "c43cb0c1518ce42b00e7c8f6eaddd5195c53a98f94adc717234a65cbcfd3f96a"
+    sha256 "49e7bca08dde95195a27f594f7c850b088be357a7c7096e44e1158c7a5fd7b33"
 
-    resource "tk" do
-      url "https://downloads.sourceforge.net/project/tcl/Tcl/8.6.8/tk8.6.8-src.tar.gz"
-      mirror "ftp://ftp.tcl.tk/pub/tcl/tcl8_6/tk8.6.8-src.tar.gz"
-      version "8.6.8"
-      sha256 "49e7bca08dde95195a27f594f7c850b088be357a7c7096e44e1158c7a5fd7b33"
-
-      # Upstream issue 7 Jan 2018 "Build failure with Aqua support on OS X 10.8 and 10.9"
-      # See https://core.tcl.tk/tcl/tktview/95a8293a2936e34cc8d0658c21e5214f1ca9b435
-      if MacOS.version == :mavericks || MacOS.version == :mountain_lion
-        patch :p0 do
-          url "https://raw.githubusercontent.com/macports/macports-ports/0a883ad388b/x11/tk/files/patch-macosx-tkMacOSXXStubs.c.diff"
-          sha256 "943241a5bc07e8a638cb09d7ee6e4ffb3705e567d7a7c411b2d5aebb9ce6c285"
-        end
+    # Upstream issue 7 Jan 2018 "Build failure with Aqua support on OS X 10.8 and 10.9"
+    # See https://core.tcl.tk/tcl/tktview/95a8293a2936e34cc8d0658c21e5214f1ca9b435
+    if MacOS.version == :mavericks || MacOS.version == :mountain_lion
+      patch :p0 do
+        url "https://raw.githubusercontent.com/macports/macports-ports/0a883ad388b/x11/tk/files/patch-macosx-tkMacOSXXStubs.c.diff"
+        sha256 "943241a5bc07e8a638cb09d7ee6e4ffb3705e567d7a7c411b2d5aebb9ce6c285"
       end
     end
   end
@@ -30,19 +28,6 @@ class TclTkX11 < Formula
   #   sha256 "96144fc3d7eaeec6125ff9f534f0aa21b61b673914dd8cb4898b10ca0530d90e" => :sierra
   #   sha256 "79222749d221013eb7d1fb529ace13293a819b43d6633b964d1f8f318ac66f33" => :el_capitan
   # end
-
-  devel do
-    url "https://downloads.sourceforge.net/project/tcl/Tcl/8.7a1/tcl8.7a1-src.tar.gz"
-    mirror "ftp://ftp.tcl.tk/pub/tcl/tcl8_7/tk8.7a1-src.tar.gz"
-    version "8.7a1"
-    sha256 "2bbd4e0bbdebeaf5dc6cc823d0805afb45c764292f6667d9ce2b9fcf5399e0dc"
-
-    resource "tk" do
-      url "https://downloads.sourceforge.net/project/tcl/Tcl/8.7a1/tk8.7a1-src.tar.gz"
-      mirror "ftp://ftp.tcl.tk/pub/tcl/tcl8_7/tk8.7a1-src.tar.gz"
-      sha256 "131e4bae43a15dff0324c0479358bb42cfd7b8de0e1ca8d93c9207643c7144dd"
-    end
-  end
 
   keg_only :provided_by_macos,
     "tk installs some X11 headers and macOS provides an (older) Tcl/Tk"
