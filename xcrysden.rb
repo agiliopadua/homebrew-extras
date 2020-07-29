@@ -5,7 +5,7 @@ class Xcrysden < Formula
   sha256 "a695729f1bb3e486b86a74106c06a392c8aca048dc6b0f20785c3c311cfb2ef4"
 
   depends_on "gcc"
-  depends_on "tcl-tk-x11"
+  depends_on "agiliopadua/extras/tcl-tk-x11"
   depends_on "fftw"
   depends_on "wget" => :build
   depends_on :x11
