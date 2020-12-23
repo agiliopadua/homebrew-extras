@@ -8,7 +8,7 @@ class Xcrysden < Formula
   depends_on "agiliopadua/extras/tcl-tk-x11"
   depends_on "fftw"
   depends_on "wget" => :build
-  depends_on :x11
+  depends_on "libx11"
 
   # Fix togl -accum false in Tcl and modify Make.sys
   patch do
