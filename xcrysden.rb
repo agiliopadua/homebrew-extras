@@ -12,8 +12,8 @@ class Xcrysden < Formula
 
   # Fix togl -accum false in Tcl and modify Make.sys
   patch do
-    url "https://gist.githubusercontent.com/specter119/4f630e538d39edcf67ec742f78c23aab/raw/464f0a813f209df5bd008b3ef4b2394e86117439/xcrysden-homebrew.patch"
-    sha256 "943241a5bc07e8a638cb09d7ee6e4ffb3705e567d7a7c411b2d5aebb9ce6c285"
+    url "https://gist.githubusercontent.com/agiliopadua/1f9fd5e8a598018f03b6/raw/178a0d79ea71d8d59d5c2a02180752cc7292cb5c/xcrysden-homebrew.patch"
+    sha256 "0609b2cf58c5523f644c9b1191e5da1bd2bba3bf73c4dad7dd78df6308112cb9"
   end
 
   def install
