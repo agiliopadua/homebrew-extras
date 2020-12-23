@@ -9,7 +9,7 @@ class TclTkX11 < Formula
   keg_only :provided_by_macos,
     "tk installs some X11 headers and MacOS provides an (older) Tcl/Tk"
 
-  depends_on :x11
+  depends_on "libx11"
   
   resource "tk" do
     url "https://downloads.sourceforge.net/project/tcl/Tcl/8.6.10/tk8.6.10-src.tar.gz"
